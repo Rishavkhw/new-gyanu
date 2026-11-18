@@ -1,0 +1,6 @@
+{
+  "name": "Gyanu Photo Studio",
+  "description": "Fine-art photography portfolio, studio services, and curated print & keepsake shop by Gyanu Photo Studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
