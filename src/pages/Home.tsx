@@ -69,7 +69,7 @@ export function Home() {
   return (
     <div>
       {/* A. Hero Section */}
-      <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-[#141210] pt-18">
+      <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-obsidian pt-18">
         <div className="absolute inset-0">
           <img
             src="/src/assets/images/hero_studio_wedding_1794992348895.jpg"
@@ -79,7 +79,7 @@ export function Home() {
           />
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-r from-[#141210]/85 via-[#141210]/55 to-[#141210]/25"
+            className="absolute inset-0 bg-gradient-to-r from-obsidian/85 via-obsidian/55 to-obsidian/25"
           />
         </div>
 
@@ -91,7 +91,7 @@ export function Home() {
             className="max-w-2xl"
           >
             <p className="text-xs font-semibold tracking-wider text-[#D4B475]">
-              Gyanu Photo Studio · Fine-Art Photography & Print Shop
+              Gyanu Digital Photo Studio · Photography, Print & Gift Shop
             </p>
             <h1 className="mt-4 font-serif text-4xl font-semibold leading-[1.08] tracking-tight text-white [text-wrap:balance] sm:text-6xl lg:text-7xl">
               Capturing Moments, Creating Memories.
@@ -102,117 +102,34 @@ export function Home() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 to="/shop"
-                className="inline-flex h-12 items-center gap-2 rounded-lg bg-[#A8823A] px-7 text-sm font-semibold text-white whitespace-nowrap transition-colors hover:bg-[#8F6D2E]"
+                className="inline-flex h-12 items-center gap-2 rounded-lg bg-gold px-7 text-sm font-semibold text-white whitespace-nowrap transition-colors hover:bg-[#8F6D2E]"
               >
                 <span>Explore Our Shop</span>
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
-              <Link
+              {/* <Link
                 to="/portfolio"
-                className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/35 bg-white/10 px-6 text-sm font-semibold text-white whitespace-nowrap backdrop-blur-sm transition-colors hover:bg-white hover:text-[#141210]"
+                className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/35 bg-white/10 px-6 text-sm font-semibold text-white whitespace-nowrap backdrop-blur-sm transition-colors hover:bg-white hover:text-obsidian"
               >
                 <span>View Portfolio</span>
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* B. Featured Photography Categories */}
+           {/* D. Our Services */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <p className="text-xs font-semibold text-[#A8823A]">Photography Genres</p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-[#141210] sm:text-4xl">
-              Featured Photography Categories
-            </h2>
-          </div>
-          <Link
-            to="/portfolio"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#141210] hover:text-[#A8823A]"
-          >
-            <span>Browse Full Portfolio</span>
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
-        </div>
-
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURED_CATEGORIES.map((cat) => (
-            <article
-              key={cat.title}
-              className="group flex flex-col overflow-hidden rounded-xl border border-[#E6DFD4] bg-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
-            >
-              <div className="aspect-[4/3] w-full overflow-hidden bg-[#F2EDE6]">
-                <ImageWithFallback
-                  src={cat.image}
-                  alt={cat.title}
-                  className="transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex flex-1 flex-col justify-between p-6">
-                <div>
-                  <h3 className="font-serif text-2xl font-semibold text-[#141210]">
-                    {cat.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#665E54]">
-                    {cat.description}
-                  </p>
-                </div>
-                <div className="mt-5">
-                  <Link
-                    to={`/portfolio?category=${encodeURIComponent(cat.category)}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#141210] transition-colors hover:text-[#A8823A]"
-                  >
-                    <span>Explore</span>
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* C. Featured Portfolio */}
-      <section className="border-y border-[#E6DFD4] bg-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-xs font-semibold text-[#A8823A]">Selected Stories</p>
-              <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-[#141210] sm:text-4xl">
-                Featured Portfolio
-              </h2>
-            </div>
-            <Link
-              to="/portfolio"
-              className="inline-flex h-10 items-center gap-2 rounded-lg border border-[#E6DFD4] bg-[#FAF8F5] px-5 text-sm font-semibold text-[#141210] transition-colors hover:bg-[#141210] hover:text-white"
-            >
-              <span>View Portfolio</span>
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          </div>
-
-          <div className="mt-10">
-            <PortfolioGallery
-              items={featuredPortfolio}
-              onSelect={(index) => setLightboxIndex(index)}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* D. Our Services */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <p className="text-xs font-semibold text-[#A8823A]">Studio Offerings</p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-[#141210] sm:text-4xl">
+            <p className="text-xs font-semibold text-gold">Studio Offerings</p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-obsidian sm:text-4xl">
               Our Services
             </h2>
           </div>
           <Link
             to="/services"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#141210] hover:text-[#A8823A]"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-obsidian hover:text-gold"
           >
             <span>View All 12 Services</span>
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -226,19 +143,102 @@ export function Home() {
         </div>
       </section>
 
+      {/* B. Featured Photography Categories */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p className="text-xs font-semibold text-gold">Photography Genres</p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-obsidian sm:text-4xl">
+              Featured Photography Categories
+            </h2>
+          </div>
+          <Link
+            to="/portfolio"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-obsidian hover:text-gold"
+          >
+            <span>Browse Full Portfolio</span>
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {FEATURED_CATEGORIES.map((cat) => (
+            <article
+              key={cat.title}
+              className="group flex flex-col overflow-hidden rounded-xl border border-[#E6DFD4] bg-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="aspect-[4/3] w-full overflow-hidden bg-sand">
+                <ImageWithFallback
+                  src={cat.image}
+                  alt={cat.title}
+                  className="transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-1 flex-col justify-between p-6">
+                <div>
+                  <h3 className="font-serif text-2xl font-semibold text-obsidian">
+                    {cat.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-taupe">
+                    {cat.description}
+                  </p>
+                </div>
+                <div className="mt-5">
+                  <Link
+                    to={`/portfolio?category=${encodeURIComponent(cat.category)}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-obsidian transition-colors hover:text-gold"
+                  >
+                    <span>Explore</span>
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* C. Featured Portfolio
+      <section className="border-y border-[#E6DFD4] bg-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-xs font-semibold text-gold">Selected Stories</p>
+              <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-obsidian sm:text-4xl">
+                Featured Portfolio
+              </h2>
+            </div>
+            <Link
+              to="/portfolio"
+              className="inline-flex h-10 items-center gap-2 rounded-lg border border-[#E6DFD4] bg-[#FAF8F5] px-5 text-sm font-semibold text-obsidian transition-colors hover:bg-obsidian hover:text-white"
+            >
+              <span>View Portfolio</span>
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+
+          <div className="mt-10">
+            <PortfolioGallery
+              items={featuredPortfolio}
+              onSelect={(index) => setLightboxIndex(index)}
+            />
+          </div>
+        </div>
+      </section> */}
+
       {/* E. Featured Products */}
       <section className="border-y border-[#E6DFD4] bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <p className="text-xs font-semibold text-[#A8823A]">Frames, Albums & Gifts</p>
-              <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-[#141210] sm:text-4xl">
+              <p className="text-xs font-semibold text-gold">Frames, Albums & Gifts</p>
+              <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-obsidian sm:text-4xl">
                 Featured Products
               </h2>
             </div>
             <Link
               to="/shop"
-              className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#141210] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#2A2622]"
+              className="inline-flex h-10 items-center gap-2 rounded-lg bg-obsidian px-5 text-sm font-semibold text-white transition-colors hover:bg-[#2A2622]"
             >
               <span>View All Products</span>
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -256,11 +256,11 @@ export function Home() {
       {/* F. Why Choose Us? + Client Notes */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold text-[#A8823A]">The Studio Standard</p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-[#141210] sm:text-4xl">
+          <p className="text-xs font-semibold text-gold">The Studio Standard</p>
+          <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-obsidian sm:text-4xl">
             Why Choose Us?
           </h2>
-          <p className="mt-3 text-base text-[#665E54]">
+          <p className="mt-3 text-base text-taupe">
             Thoughtful visual storytelling backed by in-house color calibration, archival materials, and attentive client care.
           </p>
         </div>
@@ -273,13 +273,13 @@ export function Home() {
                 key={pillar.title}
                 className="rounded-xl border border-[#E6DFD4] bg-white p-6"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#F2EDE6] text-[#A8823A]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-sand text-gold">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </div>
-                <h3 className="mt-4 font-serif text-2xl font-semibold text-[#141210]">
+                <h3 className="mt-4 font-serif text-2xl font-semibold text-obsidian">
                   {pillar.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#665E54]">
+                <p className="mt-2 text-sm leading-relaxed text-taupe">
                   {pillar.description}
                 </p>
               </div>
@@ -292,14 +292,14 @@ export function Home() {
           {TESTIMONIALS.map((t) => (
             <blockquote
               key={t.id}
-              className="flex flex-col justify-between rounded-xl border border-[#E6DFD4] bg-[#F2EDE6]/60 p-6"
+              className="flex flex-col justify-between rounded-xl border border-[#E6DFD4] bg-sand/60 p-6"
             >
-              <p className="font-serif text-xl italic leading-relaxed text-[#141210]">
+              <p className="font-serif text-xl italic leading-relaxed text-obsidian">
                 “{t.quote}”
               </p>
               <footer className="mt-5 border-t border-[#E6DFD4] pt-4">
-                <p className="text-sm font-semibold text-[#141210]">{t.name}</p>
-                <p className="text-xs text-[#665E54]">
+                <p className="text-sm font-semibold text-obsidian">{t.name}</p>
+                <p className="text-xs text-taupe">
                   {t.role} · {t.service}
                 </p>
               </footer>
@@ -309,7 +309,7 @@ export function Home() {
       </section>
 
       {/* G. Call to Action */}
-      <section className="bg-[#141210] py-20 text-white">
+      <section className="bg-obsidian py-20 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-xs font-semibold text-[#D4B475]">Begin Your Story</p>
           <h2 className="mt-3 font-serif text-3xl font-semibold tracking-tight [text-wrap:balance] sm:text-5xl">
@@ -321,13 +321,13 @@ export function Home() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-lg bg-[#A8823A] px-7 text-sm font-semibold text-white transition-colors hover:bg-[#8F6D2E]"
+              className="inline-flex h-12 items-center justify-center rounded-lg bg-gold px-7 text-sm font-semibold text-white transition-colors hover:bg-[#8F6D2E]"
             >
               Contact Us
             </Link>
             <Link
               to="/services"
-              className="inline-flex h-12 items-center justify-center rounded-lg border border-white/30 px-7 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#141210]"
+              className="inline-flex h-12 items-center justify-center rounded-lg border border-white/30 px-7 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-obsidian"
             >
               View Our Services
             </Link>

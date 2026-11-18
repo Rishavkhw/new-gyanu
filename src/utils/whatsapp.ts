@@ -1,8 +1,8 @@
 import { CartItem, Product } from '../types';
 import { formatNPR } from './formatPrice';
 
-export const STUDIO_WHATSAPP_RAW = '9862339743';
-export const STUDIO_WHATSAPP_INTL = '9779862339743';
+export const STUDIO_WHATSAPP_RAW = '9842514134';
+export const STUDIO_WHATSAPP_INTL = '9779842514134';
 
 export function buildWhatsAppUrl(message?: string): string {
   const baseUrl = `https://wa.me/${STUDIO_WHATSAPP_INTL}`;

@@ -129,22 +129,22 @@ export const FEATURED_CATEGORIES = [
     description: 'Atmospheric couple sessions set in scenic outdoor landscapes and heritage architecture.',
     image: '/src/assets/images/cat_prewedding_photography_1794992350561.jpg',
   },
-  {
-    title: 'Events & Celebrations',
-    category: 'Events' as const,
-    description: 'Discreet, storytelling coverage for birthdays, anniversaries, and cultural gatherings.',
-    image: '/src/assets/images/cat_events_celebrations_1794992349596.jpg',
-  },
-  {
-    title: 'Fashion Photography',
-    category: 'Fashion' as const,
-    description: 'Clean, intentional lighting and art direction for designers, lookbooks, and talent.',
-    image: '/src/assets/images/cat_fashion_photography_1794992351384.jpg',
-  },
-  {
-    title: 'Product Photography',
-    category: 'Product Photography' as const,
-    description: 'Crisp studio still-life imagery tailored for artisanal brands and e-commerce.',
-    image: '/src/assets/images/cat_product_photography_1794992351886.jpg',
-  },
+  // {
+  //   title: 'Events & Celebrations',
+  //   category: 'Events' as const,
+  //   description: 'Discreet, storytelling coverage for birthdays, anniversaries, and cultural gatherings.',
+  //   image: '/src/assets/images/cat_events_celebrations_1794992349596.jpg',
+  // },
+  // {
+  //   title: 'Fashion Photography',
+  //   category: 'Fashion' as const,
+  //   description: 'Clean, intentional lighting and art direction for designers, lookbooks, and talent.',
+  //   image: '/src/assets/images/cat_fashion_photography_1794992351384.jpg',
+  // },
+  // {
+  //   title: 'Product Photography',
+  //   category: 'Product Photography' as const,
+  //   description: 'Crisp studio still-life imagery tailored for artisanal brands and e-commerce.',
+  //   image: '/src/assets/images/cat_product_photography_1794992351886.jpg',
+  // },
 ];

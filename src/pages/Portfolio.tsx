@@ -45,11 +45,11 @@ export function Portfolio() {
     <div className="pt-26 pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold text-[#A8823A]">Curated Archive</p>
-          <h1 className="mt-2 font-serif text-4xl font-semibold tracking-tight text-[#141210] sm:text-5xl">
+          <p className="text-xs font-semibold text-gold">Curated Archive</p>
+          <h1 className="mt-2 font-serif text-4xl font-semibold tracking-tight text-obsidian sm:text-5xl">
             Photography Portfolio
           </h1>
-          <p className="mt-3 text-base leading-relaxed text-[#665E54]">
+          <p className="mt-3 text-base leading-relaxed text-taupe">
             A selection of weddings, intimate portraits, mountain pre-weddings, and commercial studio commissions. Click any frame to inspect it in full detail.
           </p>
         </div>
@@ -71,8 +71,8 @@ export function Portfolio() {
                 onClick={() => handleCategoryChange(category)}
                 className={`h-9 rounded-lg px-4 text-xs font-semibold whitespace-nowrap transition-colors ${
                   active
-                    ? 'bg-[#141210] text-white'
-                    : 'bg-[#F2EDE6] text-[#665E54] hover:bg-[#E6DFD4] hover:text-[#141210]'
+                    ? 'bg-obsidian text-white'
+                    : 'bg-sand text-taupe hover:bg-[#E6DFD4] hover:text-obsidian'
                 }`}
               >
                 {category}
@@ -90,13 +90,13 @@ export function Portfolio() {
             />
           ) : (
             <div className="rounded-xl border border-[#E6DFD4] bg-white py-16 text-center">
-              <p className="font-serif text-2xl text-[#141210]">
+              <p className="font-serif text-2xl text-obsidian">
                 No photographs in this category yet.
               </p>
               <button
                 type="button"
                 onClick={() => handleCategoryChange('All')}
-                className="mt-4 inline-flex h-10 items-center rounded-lg bg-[#141210] px-5 text-xs font-semibold text-white"
+                className="mt-4 inline-flex h-10 items-center rounded-lg bg-obsidian px-5 text-xs font-semibold text-white"
               >
                 Show All Photographs
               </button>

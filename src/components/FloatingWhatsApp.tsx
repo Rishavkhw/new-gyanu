@@ -3,7 +3,7 @@ import { buildWhatsAppUrl } from '../utils/whatsapp';
 export function FloatingWhatsApp() {
   return (
     <div className="group fixed bottom-5 right-5 z-40 flex items-center gap-3 sm:bottom-6 sm:right-6">
-      <span className="pointer-events-none hidden translate-x-1 rounded-md border border-[#E6DFD4] bg-white px-3 py-1.5 text-xs font-medium text-[#141210] opacity-0 shadow-md transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 sm:inline-block">
+      <span className="pointer-events-none hidden translate-x-1 rounded-md border border-[#E6DFD4] bg-white px-3 py-1.5 text-xs font-medium text-obsidian opacity-0 shadow-md transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 sm:inline-block">
         Chat with us
       </span>
       <a
@@ -12,7 +12,7 @@ export function FloatingWhatsApp() {
         rel="noopener noreferrer"
         aria-label="Chat with Gyanu Photo Studio on WhatsApp"
         title="Chat with us"
-        className="relative flex h-13 w-13 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-[#20BD5A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#141210]"
+        className="relative flex h-13 w-13 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-[#20BD5A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-obsidian"
       >
         <span
           aria-hidden="true"

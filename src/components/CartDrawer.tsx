@@ -42,19 +42,19 @@ export function CartDrawer() {
       <div
         aria-hidden="true"
         onClick={closeDrawer}
-        className="fixed inset-0 bg-[#141210]/55 backdrop-blur-[2px] transition-opacity"
+        className="fixed inset-0 bg-obsidian/55 backdrop-blur-[2px] transition-opacity"
       />
 
       <aside
         role="dialog"
         aria-modal="true"
         aria-label="Shopping cart"
-        className="relative z-10 flex h-full w-full max-w-md flex-col bg-[#FAF8F5] text-[#141210] shadow-2xl"
+        className="relative z-10 flex h-full w-full max-w-md flex-col bg-[#FAF8F5] text-obsidian shadow-2xl"
       >
         <div className="flex items-center justify-between border-b border-[#E6DFD4] bg-white px-6 py-4">
           <div>
-            <h2 className="font-serif text-2xl font-semibold text-[#141210]">Your Cart</h2>
-            <p className="text-xs text-[#665E54] tabular-nums">
+            <h2 className="font-serif text-2xl font-semibold text-obsidian">Your Cart</h2>
+            <p className="text-xs text-taupe tabular-nums">
               {totalItems} {totalItems === 1 ? 'item' : 'items'} selected
             </p>
           </div>
@@ -62,7 +62,7 @@ export function CartDrawer() {
             type="button"
             onClick={closeDrawer}
             aria-label="Close cart drawer"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-[#665E54] transition-colors hover:bg-[#F2EDE6] hover:text-[#141210]"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-taupe transition-colors hover:bg-sand hover:text-obsidian"
           >
             <X className="h-5 w-5" />
           </button>
@@ -71,19 +71,19 @@ export function CartDrawer() {
         <div className="flex-1 overflow-y-auto px-6 py-5">
           {items.length === 0 ? (
             <div className="flex h-full flex-col items-center justify-center py-12 text-center">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#F2EDE6] text-[#A8823A]">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sand text-gold">
                 <ShoppingBag className="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 className="font-serif text-2xl font-medium text-[#141210]">
+              <h3 className="font-serif text-2xl font-medium text-obsidian">
                 Your cart is empty
               </h3>
-              <p className="mt-2 max-w-xs text-sm text-[#665E54]">
+              <p className="mt-2 max-w-xs text-sm text-taupe">
                 Explore handcrafted frames, linen photo albums, and personalized studio keepsakes.
               </p>
               <Link
                 to="/shop"
                 onClick={closeDrawer}
-                className="mt-6 inline-flex items-center justify-center rounded-lg bg-[#141210] px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2A2622]"
+                className="mt-6 inline-flex items-center justify-center rounded-lg bg-obsidian px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2A2622]"
               >
                 Continue Shopping
               </Link>
@@ -110,11 +110,11 @@ export function CartDrawer() {
                         <Link
                           to={`/shop/${product.slug}`}
                           onClick={closeDrawer}
-                          className="block truncate text-sm font-semibold text-[#141210] hover:text-[#A8823A]"
+                          className="block truncate text-sm font-semibold text-obsidian hover:text-gold"
                         >
                           {product.name}
                         </Link>
-                        <p className="mt-0.5 text-xs tabular-nums text-[#665E54]">
+                        <p className="mt-0.5 text-xs tabular-nums text-taupe">
                           {formatNPR(product.price)} each
                         </p>
                       </div>
@@ -122,7 +122,7 @@ export function CartDrawer() {
                         type="button"
                         onClick={() => removeFromCart(product.id)}
                         aria-label={`Remove ${product.name}`}
-                        className="rounded p-1.5 text-[#665E54] transition-colors hover:bg-[#F2EDE6] hover:text-[#141210]"
+                        className="rounded p-1.5 text-taupe transition-colors hover:bg-sand hover:text-obsidian"
                       >
                         <Trash2 className="h-4 w-4" />
                       </button>
@@ -134,7 +134,7 @@ export function CartDrawer() {
                           type="button"
                           onClick={() => updateQuantity(product.id, quantity - 1)}
                           aria-label={`Decrease quantity of ${product.name}`}
-                          className="flex h-8 w-8 items-center justify-center text-[#141210] hover:bg-[#F2EDE6]"
+                          className="flex h-8 w-8 items-center justify-center text-obsidian hover:bg-sand"
                         >
                           <Minus className="h-3.5 w-3.5" />
                         </button>
@@ -145,12 +145,12 @@ export function CartDrawer() {
                           type="button"
                           onClick={() => updateQuantity(product.id, quantity + 1)}
                           aria-label={`Increase quantity of ${product.name}`}
-                          className="flex h-8 w-8 items-center justify-center text-[#141210] hover:bg-[#F2EDE6]"
+                          className="flex h-8 w-8 items-center justify-center text-obsidian hover:bg-sand"
                         >
                           <Plus className="h-3.5 w-3.5" />
                         </button>
                       </div>
-                      <span className="text-sm font-semibold tabular-nums text-[#141210]">
+                      <span className="text-sm font-semibold tabular-nums text-obsidian">
                         {formatNPR(product.price * quantity)}
                       </span>
                     </div>
@@ -163,11 +163,11 @@ export function CartDrawer() {
 
         {items.length > 0 && (
           <div className="border-t border-[#E6DFD4] bg-white p-6">
-            <div className="flex items-center justify-between text-base font-semibold text-[#141210]">
+            <div className="flex items-center justify-between text-base font-semibold text-obsidian">
               <span>Total Amount</span>
               <span className="tabular-nums">{formatNPR(totalAmount)}</span>
             </div>
-            <p className="mt-1 text-xs text-[#665E54]">
+            <p className="mt-1 text-xs text-taupe">
               Orders are confirmed directly with our studio team via WhatsApp.
             </p>
             <div className="mt-4 flex flex-col gap-2.5">
@@ -183,14 +183,14 @@ export function CartDrawer() {
                 <Link
                   to="/cart"
                   onClick={closeDrawer}
-                  className="flex h-10 items-center justify-center rounded-lg border border-[#E6DFD4] bg-[#FAF8F5] px-4 text-xs font-semibold text-[#141210] transition-colors hover:bg-[#F2EDE6]"
+                  className="flex h-10 items-center justify-center rounded-lg border border-[#E6DFD4] bg-[#FAF8F5] px-4 text-xs font-semibold text-obsidian transition-colors hover:bg-sand"
                 >
                   View Cart Page
                 </Link>
                 <Link
                   to="/shop"
                   onClick={closeDrawer}
-                  className="flex h-10 items-center justify-center rounded-lg border border-[#E6DFD4] bg-white px-4 text-xs font-semibold text-[#141210] transition-colors hover:bg-[#FAF8F5]"
+                  className="flex h-10 items-center justify-center rounded-lg border border-[#E6DFD4] bg-white px-4 text-xs font-semibold text-obsidian transition-colors hover:bg-[#FAF8F5]"
                 >
                   Continue Shopping
                 </Link>

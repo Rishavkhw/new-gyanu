@@ -4,7 +4,7 @@ import { buildWhatsAppUrl, getGeneralInquiryMessage, STUDIO_WHATSAPP_RAW } from 
 
 const QUICK_LINKS = [
   { label: 'Home', to: '/' },
-  { label: 'Portfolio', to: '/portfolio' },
+  // { label: 'Portfolio', to: '/portfolio' },
   { label: 'Services', to: '/services' },
   { label: 'Shop', to: '/shop' },
   { label: 'About Us', to: '/about' },
@@ -21,7 +21,7 @@ const SHOP_CATEGORIES = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#E6DFD4] bg-[#141210] text-[#FAF8F5]">
+    <footer className="border-t border-[#E6DFD4] bg-obsidian text-[#FAF8F5]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           {/* Section 1: Brand */}
@@ -50,7 +50,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-3 pt-1">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/bipinbaastolaa?utm_source=ig_web_button_share_sheet&jplx=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -59,7 +59,7 @@ export function Footer() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/bipina.bastola.2025"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -136,13 +136,13 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[#D4B475]" aria-hidden="true" />
-                <a href="mailto:hello@gyanuphotostudio.com" className="hover:text-white">
-                  hello@gyanuphotostudio.com
+                <a href="mailto:gyanuphotostudio@gmail.com" className="hover:text-white">
+                  gyanuphotostudio@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#D4B475]" aria-hidden="true" />
-                <span>Main Studio Street, Kathmandu, Nepal</span>
+                <span>Janta Multiple Campus Road Line, Itahari-5, Sunsari, Nepal</span>
               </li>
             </ul>
           </div>
@@ -154,9 +154,9 @@ export function Footer() {
             <Link to="/cart" className="hover:text-white">
               Cart
             </Link>
-            <Link to="/wishlist" className="hover:text-white">
+            {/* <Link to="/wishlist" className="hover:text-white">
               Wishlist
-            </Link>
+            </Link> */}
             <Link to="/contact" className="hover:text-white">
               Inquiries
             </Link>

@@ -42,13 +42,13 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
           <div
             key={toast.id}
             role="status"
-            className="pointer-events-auto flex items-center gap-3 rounded-lg border border-[#E6DFD4] bg-white px-4 py-3 text-sm font-medium text-[#141210] shadow-lg transition-all duration-200"
+            className="pointer-events-auto flex items-center gap-3 rounded-lg border border-[#E6DFD4] bg-white px-4 py-3 text-sm font-medium text-obsidian shadow-lg transition-all duration-200"
           >
             <span
               className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${
                 toast.type === 'success'
-                  ? 'bg-[#141210] text-white'
-                  : 'bg-[#F2EDE6] text-[#141210]'
+                  ? 'bg-obsidian text-white'
+                  : 'bg-sand text-obsidian'
               }`}
             >
               {toast.type === 'success' ? (
@@ -62,7 +62,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               type="button"
               onClick={() => removeToast(toast.id)}
               aria-label="Dismiss notification"
-              className="ml-1 rounded p-1 text-[#665E54] hover:bg-[#F2EDE6] hover:text-[#141210]"
+              className="ml-1 rounded p-1 text-taupe hover:bg-sand hover:text-obsidian"
             >
               <X className="h-3.5 w-3.5" />
             </button>

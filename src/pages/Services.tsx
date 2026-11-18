@@ -9,11 +9,11 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 border-b border-[#E6DFD4] pb-10 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold text-[#A8823A]">Studio & On-Location</p>
-            <h1 className="mt-2 font-serif text-4xl font-semibold tracking-tight text-[#141210] sm:text-5xl">
+            <p className="text-xs font-semibold text-gold">Studio & On-Location</p>
+            <h1 className="mt-2 font-serif text-4xl font-semibold tracking-tight text-obsidian sm:text-5xl">
               Photography & Print Services
             </h1>
-            <p className="mt-3 text-base leading-relaxed text-[#665E54]">
+            <p className="mt-3 text-base leading-relaxed text-taupe">
               From full-day wedding storytelling to passport portraits, archival printing, and bespoke framing. Select any service below to message our team directly on WhatsApp.
             </p>
           </div>

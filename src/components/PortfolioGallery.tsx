@@ -16,7 +16,7 @@ export function PortfolioGallery({ items, onSelect }: PortfolioGalleryProps) {
           type="button"
           onClick={() => onSelect(index)}
           aria-label={`Open ${item.title} in lightbox`}
-          className="group relative block w-full break-inside-avoid overflow-hidden rounded-xl border border-[#E6DFD4] bg-[#F2EDE6] text-left focus-visible:outline-2"
+          className="group relative block w-full break-inside-avoid overflow-hidden rounded-xl border border-[#E6DFD4] bg-sand text-left focus-visible:outline-2"
         >
           <div
             className={`w-full overflow-hidden ${
@@ -34,9 +34,9 @@ export function PortfolioGallery({ items, onSelect }: PortfolioGalleryProps) {
             />
           </div>
 
-          <div className="pointer-events-none absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-[#141210]/85 via-[#141210]/20 to-transparent p-5 opacity-90 transition-opacity duration-200 sm:opacity-0 sm:group-hover:opacity-100">
+          <div className="pointer-events-none absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-obsidian/85 via-obsidian/20 to-transparent p-5 opacity-90 transition-opacity duration-200 sm:opacity-0 sm:group-hover:opacity-100">
             <div className="flex justify-end">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-[#141210] shadow-sm">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-obsidian shadow-sm">
                 <Expand className="h-4 w-4" aria-hidden="true" />
               </span>
             </div>

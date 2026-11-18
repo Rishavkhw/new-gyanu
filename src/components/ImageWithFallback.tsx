@@ -21,10 +21,10 @@ export function ImageWithFallback({
       <div
         role="img"
         aria-label={alt}
-        className={`flex flex-col items-center justify-center bg-[#EFE9E0] p-6 text-center text-[#665E54] ${className}`}
+        className={`flex flex-col items-center justify-center bg-[#EFE9E0] p-6 text-center text-taupe ${className}`}
       >
-        <Camera className="mb-2 h-7 w-7 text-[#A8823A]" aria-hidden="true" />
-        <span className="max-w-[200px] text-xs font-medium leading-relaxed text-[#665E54]">
+        <Camera className="mb-2 h-7 w-7 text-gold" aria-hidden="true" />
+        <span className="max-w-[200px] text-xs font-medium leading-relaxed text-taupe">
           {alt}
         </span>
       </div>

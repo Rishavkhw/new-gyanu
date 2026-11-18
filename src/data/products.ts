@@ -259,4 +259,20 @@ export const PRODUCTS: Product[] = [
     material: 'Brass Hooks, Cotton Handling Gloves & Optical Cloth',
     inStock: true,
   },
+  {
+  id: 'prod-15',
+  slug: 'personalized-photo-gifts',
+  name: 'Visit Shop...',
+  category: 'Customized Gifts',
+  shortDescription: 'Explore personalized photo frames, printed mugs, photo cushions, keychains, albums, and memorable gifts for every occasion.',
+  description:
+    'Discover our collection of customized photo gifts, including personalized mugs, photo frames, cushions, keychains, photo albums, and other creative keepsakes. Perfect for birthdays, anniversaries, celebrations, and special moments.',
+  price: 100,
+  images: [
+    'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=1000&q=85',
+  ],
+  dimensions: 'Multiple Sizes & Custom Options',
+  material: 'Various Materials Depending on Gift Item',
+  inStock: true,
+},
 ];
